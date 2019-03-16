@@ -22,7 +22,7 @@ node('docker')
   }
   stage('Publish')
   {
-    def server = Artifactory.server 'Default Artifatory Server'
+    def server = Artifactory.server 'Default Artifactory Server'
     def uploadSpec = """{
       "files":[
       {
