@@ -11,6 +11,7 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <sonar.host.url>http://14.42.235.248:49154/</sonar.host.url>
     <sonar.language>java</sonar.language>
   </properties>
 
