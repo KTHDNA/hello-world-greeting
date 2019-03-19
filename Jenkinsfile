@@ -73,17 +73,17 @@ node('docker_pt')
   }
 }
 node('production'){
-  stage('Deploy and Prod')
-  {
+  stage('Deploy and Prod'){
     def server = Artifactory.server 'Default Artifactory server'
     def downloadSpec= """{
     "files" : [
       {
         "pattern":"example-project/$BUILD_NUMBER/*.zip",
-        "target":"/home/ubuntu/tomcat/webapps/"
-        "props":"Performance-Tested=Yes;Intergration-Tested=Yes",
+        "target":"/home/ubuntu/tomcat/webapps/",
+        "props":"Performance-Tested=Yes;Intergration-Tested=Yes"
       }
     ]
   }"""
     server.download(downloadSpec)
+  }
 }
