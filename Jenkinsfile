@@ -74,7 +74,7 @@ node('docker_pt')
 }
 node('production'){
   stage('Deploy and Prod'){
-    def server = Artifactory.server 'Default Artifactory server'
+    def server = Artifactory.server 'Default Artifactory Server'
     def downloadSpec= """{
     "files" : [
       {
